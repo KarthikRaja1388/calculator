@@ -4,6 +4,7 @@ let num1Element = document.querySelector(".num1");
 let num2Element = document.querySelector(".num2");
 let operatorElement = document.querySelector(".operator");
 let calculate = document.querySelector(".btn-calculate");
+let reset = document.querySelector(".btn-reset");
 
 function calculator(num1, num2, operator) {
   switch (operator) {
@@ -35,4 +36,11 @@ calculate.addEventListener("click", () => {
   } else {
     calculator(num1, num2, operator);
   }
+});
+
+reset.addEventListener("click", () => {
+  display.innerHTML = 0;
+  num1Element.value = "";
+  num2Element.value = "";
+  operatorElement.value = "";
 });
